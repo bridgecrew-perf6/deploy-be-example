@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
   res.sendStatus(200)
 })
 
+app.get('/greet', (req, res) => {
+  res.send(`hola ${process.env.NAME}`)
+})
+
 app.listen(port, () => {
   console.log(`Server listening on http://localhost:${port}`)
 });
